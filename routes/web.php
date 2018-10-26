@@ -27,8 +27,12 @@ Route::get('test', function () {
     return view('welcome');
 });
 
+Route::get('dashboard', function () {
+    return 'dashboard';
+});
+
 Route::group(['prefix'=>'admin'], function () {
     Route::get('dashboard', function () {
-        return 'dashboard';
+        return 'admin dashboard';
     });
 });
